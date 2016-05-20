@@ -48,13 +48,23 @@ sub inc_version {
  say inc_version("1.9", 1); # => "2.10"
 
 
+=head1 DESCRIPTION
+
+This module provides utility routines related to monotonic versioning (see link
+to the manifesto in L</"SEE ALSO">).
+
+
 =head1 FUNCTIONS
 
 None exported by default, but they are exportable.
 
 =head2 valid_version($v) => bool
 
+Check whether string C<$v> contains a valid monotonic version number.
+
 =head2 inc_version($v, $inc_compat) => str
+
+Return version number C<$v> incremented by one release. Die if C<$v> is invalid.
 
 
 =head1 SEE ALSO
